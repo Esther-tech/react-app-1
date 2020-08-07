@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*root colors*/
+
+:root {
+    --clr-bg: #EAE7DC;
+    --clr-txt: #494846;
+    --clr-white: #FFF;
+    --clr-primary: #F0F1F3; 
+    --clr-shadow: rgb(128, 126, 123);
+}
+
+.darkmode {
+    --clr-bg: rgb(151, 146, 137);
+    --clr-txt: white;
+    --clr-white: #494846;
+    --clr-primary: #c7c7c7; 
+    --clr-shadow: rgb(63, 61, 57);
+}
+
+/*main section*/
+body {
+    background: var(--clr-bg);
+    font-family: 'Mulish', sans-serif;
+    color: var(--clr-txt);
+    display: flex;
+    justify-content: center;
+    margin: 7em 10% 7em;
+}
+
+.list-container {
+    background: var(--clr-white);
+    box-shadow: 0 0 10px var(--clr-shadow);
+    padding: 30px 0;
+    width: 60%;
+    min-width: 400px;
+    max-width: 600px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, auto);
+}
+
+/*Border radius*/
+.list-container, form, form input, button, .todo {
+    border-radius: 10px;
+}
+
+/*Title*/
+header {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+header, form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*Input form*/
+
+form {
+    border: 1px solid var(--clr-primary);
+    background: var(--clr-primary);
+    margin: 25px 20%;   
+}
+
+form input, form button {
+    font-size: 1rem;
+    border: none;
+    background: var(--clr-primary);
+    outline: none;
+}
+
+form input {
+    width: 50%;
+    flex-grow: 8;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    color: var(--clr-txt);
+    padding: 0.5rem;
+}
+
+/*Buttons and icons*/
+
+button {
+    cursor: pointer;
+}
+
+form button {
+    flex-grow: 1;
+    padding: 0.6rem 0.15rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+form button:hover, 
+.todo-list button:hover, 
+.dark-btn:hover  {
+    background: var(--clr-white);
+}
+
+.delete-btn, .complete-btn, .dark-btn {
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    background: var(--clr-primary);
+}
+
+.dark-btn{
+    border: 1.5px solid #d7d8da;
+}
+
+.clear-btn {
+    padding: 1rem;
+    border: none;
+    background: none;
+}
+
+.clear-btn-text {
+    color: var(--clr-txt);
+    font-size: 0.9rem;
+    font-weight: 800;
+    font-family: 'Mulish', sans-serif;
+    outline: none;   
+}
+
+.clear-btn:focus, .clear-btn:hover {
+    outline: none;
+}
+
+i {
+    font-size: 1.1rem;
+    text-align: right;
+    color: var(--clr-txt);
+}
+
+.fa-check-square, .fa-minus-square, .fa-check-square, .fa-adjust {
+    pointer-events: none;
+}
+
+/*To do items*/
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 20%;
+    background: var(--clr-primary);
+    transition: all 0.6s ease;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo li {
+    flex: 1;
+    margin-left: 1em;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+/*Dark mode toggle*/
+.dark {
+    margin: 0 2em 0 auto;
+    display: block;
+}   
+
+/*clear list*/
+.clear-list {
+    display: block;
+    margin: 30px auto 10px;
+}
+
+
+
+
+
+
