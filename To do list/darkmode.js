@@ -1,10 +1,6 @@
 let darkMode = localStorage.getItem("darkMode");
 const darkModeButton = document.getElementById("toggle-dark");
 
-//check if dark mode is enabled
-//if off, turn off
-//if on, turn off
-
 //Functions
 const darkModeOn = () => {
     //add class to body

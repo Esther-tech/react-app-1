@@ -85,7 +85,6 @@ const clearAll = () => {
 }
 
 
-
 //Event listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
